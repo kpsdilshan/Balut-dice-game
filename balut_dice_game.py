@@ -19,7 +19,6 @@ def display_rules():
 
 def welcome():
     
-    
     player_count = input("How may palyers are there: ")
     
     if(int(player_count)<1 or int(player_count)>4):
@@ -56,7 +55,7 @@ def ranking(player,dices):
     straight_1 = [1,2,3,4,5]
     straight_2 = [2,3,4,5,6]
     
-    for i in range(6):
+    for i in range(1,7):
         if(dices.count(i)==5):
             player.rank=1
             print(player.name, " has 5 of same number ")
@@ -66,19 +65,19 @@ def ranking(player,dices):
         player.rank=2
         return
 
-    for i in range(6):
+    for i in range(1,7):
         if(dices.count(i)==4):
             player.rank=3
             print(player.name, " has 4 of same number ")
             return
                 
-    for i in range(6):
+    for i in range(1,7):
         if(dices.count(i)==3):
             player.rank=4
             print(player.name, " has 3 of same number ")
             return
                 
-    for i in range(6):
+    for i in range(1,7):
         if(dices.count(i)==2):
             player.rank=5
             print(player.name, " has 2 of same number ")
